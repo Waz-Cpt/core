@@ -110,8 +110,9 @@ LIGHTS: dict[str, tuple[TuyaLightEntityDescription, ...]] = {
         ),
         # Not documented
         # Based on multiple reports: manufacturer customized Dimmer 2 switches
+        # The scond channel requires key=DPCpde.SWITCH_1 and not SWITCH_LED_1
         TuyaLightEntityDescription(
-            key=DPCode.SWITCH_LED_1,
+            key=DPCode.SWITCH_1,
             name="Light",
             brightness=DPCode.BRIGHT_VALUE_1,
         ),
